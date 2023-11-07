@@ -1,26 +1,28 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+   <div class="wrapper">
+		<selector-component/>
+		<cars-list-component/>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CarsListComponent from './components/CarsListComponent.vue';
+import SelectorComponent from './components/SelectorComponent.vue';
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
-    },
+		SelectorComponent,
+		CarsListComponent
+	},
 }
 </script>
 
 <style lang="scss">
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+.wrapper{
+	display: flex;
+	gap: 30px;
+	max-width: 90vw;
+	margin: 50px auto;
 }
 </style>
